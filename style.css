@@ -1,0 +1,127 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.contact-form {
+    background: linear-gradient(145deg, #ffb3c6, #ff80ab);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    animation: slideUp 1s ease-out;
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+label {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff80ab;
+    box-shadow: 0 0 5px rgba(255, 128, 171, 0.8);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff80ab;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff5580;
+}
+
+button:focus {
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for Input Fields */
+input, textarea {
+    animation: fadeIn 0.5s ease-out;
+}
+
+input:nth-child(2), textarea {
+    animation-delay: 0.2s;
+}
+
+button {
+    animation: fadeIn 0.5s ease-out;
+    animation-delay: 0.4s;
+}
+
+/* Input Fields Hover Effect */
+input:focus, textarea:focus {
+    border-color: #ff80ab;
+    box-shadow: 0 0 5px rgba(255, 128, 171, 0.8);
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 30px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    input, textarea, button {
+        font-size: 14px;
+    }
+}
